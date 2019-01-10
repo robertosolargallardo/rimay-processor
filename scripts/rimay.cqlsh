@@ -1,0 +1,3 @@
+CREATE KEYSPACE rimay WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+
+CREATE TABLE rimay.statistics ( id int , timestamp bigint , who text , count bigint , sum bigint , min int , average double , max int, PRIMARY KEY (id, timestamp) )  WITH CLUSTERING ORDER BY (timestamp ASC);
